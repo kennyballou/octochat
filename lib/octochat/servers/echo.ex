@@ -16,6 +16,7 @@ defmodule Octochat.Echo do
 
   def handle_info({:tcp, _, msg}, state = %{socket: socket}) do
     msg
+      |> String.reverse()
       |> write_line!(socket)
     {:noreply, state}
   end
