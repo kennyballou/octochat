@@ -18,6 +18,7 @@ defmodule Octochat.Echo do
     msg
       |> String.trim()
       |> String.reverse()
+      |> (fn (line) -> line <> "\n" end).()
       |> write_line!(socket)
     {:noreply, state}
   end
