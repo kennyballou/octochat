@@ -14,7 +14,8 @@ defmodule Octochat.Mixfile do
   end
 
   def application do
-    [applications: [:logger]]
+    [applications: [:logger],
+     mod: {Octochat.Application, []}]
   end
 
   defp deps do
