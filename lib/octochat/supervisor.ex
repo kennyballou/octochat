@@ -11,6 +11,7 @@ defmodule Octochat.Supervisor do
 
   def init(_) do
     children = [
+      supervisor(Task.Supervisor, [[name: Octochat.TaskSupervisor]]),
       worker(Task, [Octochat.Acceptor, :accept, []])
     ]
 
