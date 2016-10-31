@@ -10,7 +10,9 @@ defmodule Octochat.Supervisor do
   end
 
   def init(_) do
-    children = []
+    children = [
+      worker(Task, [Octochat.Acceptor, :accept, []])
+    ]
 
     opts = [strategy: :one_for_one]
     supervise(children, opts)
