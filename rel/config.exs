@@ -1,6 +1,6 @@
 use Mix.Releases.Config,
     default_release: :default,
-    default_environment: :dev
+    default_environment: Mix.env
 
 environment :dev do
   set dev_mode: true
