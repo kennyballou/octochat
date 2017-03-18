@@ -20,7 +20,7 @@ defmodule Octochat.Mixfile do
 
   defp deps do
     [{:credo, "~> 0.5", only: :credo},
-     {:distillery, "~> 0.10", only: [:dev, :prod]},
+     {:distillery, "~> 1.0", only: [:dev, :prod]},
      {:earmark, "~> 0.2", only: :docs},
      {:ex_doc, "~> 0.12", only: :docs}]
   end
